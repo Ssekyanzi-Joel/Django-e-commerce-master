@@ -33,9 +33,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
-
+environ.Env.read_env()
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY')
+# SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = '42#m^8er^dd3^kh6$jsb9i_z7#grc!sflg=w)6%fc$i%348_#m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = development
@@ -44,7 +45,10 @@ DEBUG = development
 ALLOWED_HOSTS = [
     'ddeveloper72-ecommerce.herokuapp.com',
     '.localhost',
-    '127.0.0.1'
+    '127.0.0.1',
+    'ddeveloper72-ecommerce.herokuapp.com',
+    os.environ.get('C9_HOSTNAME'),
+    os.environ.get('localhost', '127.0.0.1')
 ]
 
 
