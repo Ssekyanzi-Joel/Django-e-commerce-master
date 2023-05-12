@@ -208,3 +208,5 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'brianbukenyap9@gmail.com'
 EMAIL_HOST_PASSWORD = 'Namugongo9.'
 EMAIL_PORT = 587
+# app verification code
+# mxldmayubwuxdmll
