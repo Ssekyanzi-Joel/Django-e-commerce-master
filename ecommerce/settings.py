@@ -177,7 +177,7 @@ AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 STATICFILES_LOCATION = 'static'
 STATICFILES_STORAGE = 'custom_storages.StaticStorage'
 AWS_LOCATION = 'static'
-STATIC_URL = '/static/'
+STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
 
 
 # STATIC_URL = 'static/'
@@ -195,7 +195,7 @@ MEDIA_ROOT = (
 )
 
 # AWS custom domain and , media files location, gets injected here
-MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
+MEDIA_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/"
 
 
 STRIPE_PUBLISHABLE = 'pk_test_51N6xH2E8wb9a5bfDR2gdtMnAbYcYjZa3nbrMNwY03dtuFcXZa7RdkUClp8NPsPx8Cu4dCp1VVK4JxUuWNQ2JoFjB00Db681CPy'
